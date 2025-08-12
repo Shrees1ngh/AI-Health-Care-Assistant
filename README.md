@@ -15,7 +15,7 @@ This application is built as a single-page web app with several key features:
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** HTML, Tailwind CSS
+* **Frontend:** HTML, CSS
 * **Logic:** JavaScript
 * **Core AI:** Google Gemini API
 
@@ -31,7 +31,7 @@ You need a modern web browser and a code editor (like [VS Code](https://code.vis
 
 1.  **Clone the repo**
     ```sh
-    git clone [https://github.com/Shrees1ngh/AI-Health-Care-Assistant.git](https://github.com/Shrees1ngh/AI-Health-Care-Assistant.git)
+    git clone [https://github.com/Shrees1ngh/AI-Health-Care-Assistant.git]
     ```
 2.  **Get a Google Gemini API Key**
     * Go to [Google AI Studio](https://aistudio.google.com/app/apikey).
