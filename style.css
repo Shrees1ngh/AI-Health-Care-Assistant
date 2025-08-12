@@ -1,0 +1,173 @@
+:root {
+    --primary: #009688;
+    --primary-light: #4db6ac;
+    --accent: #3b82f6;
+    --danger: #ef4444;
+    --bg-light: #f5f7fa;
+    --text-dark: #23272f;
+}
+
+/* Body background */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e0f2f1 0%, #f5f3ff 100%);
+    color: var(--text-dark);
+    min-height: 100vh;
+}
+
+/* Glass effect card */
+.main-content {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.12);
+    backdrop-filter: blur(10px);
+    transition: 0.25s ease;
+}
+.main-content:hover {
+    box-shadow: 0 12px 40px rgba(31, 38, 135, 0.18);
+}
+
+/* Chat bubbles */
+.chat-bubble {
+    max-width: 80%;
+    line-height: 1.6;
+    border-radius: 1.2rem;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+    transition: transform 0.1s;
+}
+.chat-bubble-user {
+    background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 0.3rem;
+}
+.chat-bubble-ai {
+    background: #fff;
+    color: var(--text-dark);
+    border: 1px solid #e0e7ff;
+    align-self: flex-start;
+    border-bottom-left-radius: 0.3rem;
+}
+
+/* Scrollbar */
+#chat-container::-webkit-scrollbar {
+    width: 8px;
+}
+#chat-container::-webkit-scrollbar-thumb {
+    background: #b2dfdb;
+    border-radius: 4px;
+}
+#chat-container::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-light);
+}
+
+/* Tabs */
+.tab-btn-active {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background-clip: text;                /* Standard */
+    -webkit-background-clip: text;        /* Chrome, Safari, Edge */
+    color: transparent;                   /* Standard for Firefox */
+    -webkit-text-fill-color: transparent; /* Chrome, Safari, Edge */
+    font-weight: 700;
+}
+.tab-btn-active:hover{
+    border-bottom: 3px solid var(--accent);
+    transform: scale(1.05)
+}
+.tab-btn-inactive {
+    color: #6b7280;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, transform 0.2s;
+}
+.tab-btn-inactive:hover {
+    color: var(--primary);
+    transform: scale(1.05);
+}
+
+/* Inputs */
+.input-light {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1.5px solid #b2dfdb;
+    color: var(--text-dark);
+    transition: 0.2s;
+}
+.input-light:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.15);
+    outline: none;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    transition: 0.25s;
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+.btn-secondary {
+    background: #f3f4f6;
+    border: 1.5px solid #b2dfdb;
+    color: var(--primary);
+    font-weight: 500;
+}
+.btn-secondary:hover {
+    background: #e0f2f1;
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* Disclaimer */
+.disclaimer-light {
+    background: linear-gradient(90deg, #fff5f5 80%, #f3e8ff 100%);
+    border-left: 6px solid var(--danger);
+    color: var(--danger);
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.05);
+}
+
+/* Header image */
+header img {
+    display: block;
+    margin: 0 auto 1.5rem;
+    max-height: 9rem;
+    border-radius: 2rem 2rem 0.5rem 2rem;
+    box-shadow: 0 8px 32px rgba(0, 150, 136, 0.25);
+    transition: 0.3s;
+}
+header img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 16px 48px rgba(0, 150, 136, 0.35);
+}
+
+/* AI Health Assistant Title */
+.health-title {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background-clip: text;                /* Standard */
+    -webkit-background-clip: text;        /* Chrome, Safari, Edge */
+    color: transparent;                   /* Standard for Firefox */
+    -webkit-text-fill-color: transparent; /* Chrome, Safari, Edge */
+    font-weight: 700;
+}
+.feature-icon {
+    width: 24px;   /* control icon width */
+    height: 24px;  /* control icon height */
+    flex-shrink: 0; /* prevent squishing in flex layouts */
+    margin-right: 8px; /* space between icon and text */
+    display: inline-block;
+    vertical-align: middle;
+}
+.feature-title {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #1f2937; /* gray-800 */
+    gap: 8px;
+}
