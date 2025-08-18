@@ -171,7 +171,7 @@ function handleApiError(error, outputDiv, context) {
 
 async function callGeminiAPI(prompt, history = [], systemInstruction = null) {
     console.log("Calling Gemini API...");
-    const apiKey = "AIzaSyD6J4HSgyX_7w88ONOBQmesY3itLX8v1u0"; // Enter api key
+    const apiKey = ""; // Enter api key
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
     const payload = {
