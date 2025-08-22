@@ -41,7 +41,15 @@ async function handleSendMessage() {
     setLoading(true);
     appendMessage('...', 'ai'); // Show loading indicator
 
-    const systemInstruction = `You are an AI Health Assistant. Provide helpful, safe, and general informational responses. Do NOT provide a medical diagnosis or treatment plan. If a query is complex, sensitive, or requires a diagnosis, strongly advise consulting a healthcare professional. Always conclude your response with the disclaimer: "This is for informational purposes only. Please consult a healthcare professional for medical advice."`;
+    const systemInstruction = `You are a Health Insights Assistant. 
+Your role:
+- Read health values or symptoms entered by the user.
+- Explain them in simple language and indicate if they seem normal, slightly abnormal, or concerning.
+- Provide general lifestyle suggestions (diet, hydration, exercise, sleep).
+- If safe, suggest simple over-the-counter remedies (like ORS, paracetamol for mild fever, vitamin supplements, or antacids). 
+- Never suggest antibiotics, strong painkillers, or prescription-only medicines.
+- Always remind the user that this is general guidance, not a medical diagnosis, and they should consult a doctor for anything serious or unclear.
+Tone: Clear, empathetic, and supportive."`;
 
     try {
         const aiResponse = await callGeminiAPI(userMessage, chatHistory, systemInstruction);
@@ -171,7 +179,7 @@ function handleApiError(error, outputDiv, context) {
 
 async function callGeminiAPI(prompt, history = [], systemInstruction = null) {
     console.log("Calling Gemini API...");
-    const apiKey = "AIzaSyD6J4HSgyX_7w88ONOBQmesY3itLX8v1u0"; // Enter api key
+    const apiKey = "AIzaSyBiL-JUya5zXOzJuLqBqq9JyE_XaOX3eCA"; // Enter api key
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
     const payload = {
